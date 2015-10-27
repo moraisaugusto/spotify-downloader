@@ -10,12 +10,12 @@ os.environ["SPOTIPY_REDIRECT_URI"] = 'augustomorais.com.br'
 
 # Retrieving each Playlist and Recording on Database
 #spotify = Spotify()
-#spotify.retrievePlaylists("moraisaf")
+#spotify.retrievePlaylists("")
 
 
 # Getting every Music
 youtube = Youtube()
-youtube.getMusics('Stress')
+youtube.getMusics('')
 
 
 
