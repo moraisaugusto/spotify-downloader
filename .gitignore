@@ -1,3 +1,7 @@
+# Ignoring downloads content and temp folder
+downloads/*
+tmp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -11,7 +15,6 @@ env/
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
 lib/
