@@ -1,7 +1,7 @@
-# Another Dotfiles
+# Spotify Downloader
 
+__Spotify Downloader__ is a app that download your the spotify playlist, convert all musics to mp3 and write the tag3d. This was created only for educational use. 
 
-__Another dotfiles__ is a collection of ZSH and VIM configurations based on [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and [nicknisi/dotfiles](https://github.com/nicknisi/dotfiles). 
 
 ### Prerequisites
 
@@ -33,8 +33,14 @@ Configure your credentials. Edit the file spotify.py
 os.environ["SPOTIPY_CLIENT_ID"] = ''
 os.environ["SPOTIPY_CLIENT_SECRET"] = ''
 os.environ["SPOTIPY_REDIRECT_URI"] = 'yourredirectURI'
+spotify.retrievePlaylists("SPOTIFYUSERNAME")
+youtube.getMusics('YOURPLAYLIST')
 ```
 
-## License
+#### Using
 
-Another Dotfiles is released under the [MIT license](https://raw.githubusercontent.com/aflavio/another-dotfiles/master/LICENSE).
+Edit the file spotify.py
+
+```shell
+python spotify.py
+```
