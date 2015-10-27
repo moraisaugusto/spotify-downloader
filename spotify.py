@@ -5,7 +5,7 @@ from libs.youtube import Youtube
 # Credentials
 os.environ["SPOTIPY_CLIENT_ID"] = ''
 os.environ["SPOTIPY_CLIENT_SECRET"] = ''
-os.environ["SPOTIPY_REDIRECT_URI"] = 'augustomorais.com.br'
+os.environ["SPOTIPY_REDIRECT_URI"] = 'YOUR URI'
 
 
 # Retrieving each Playlist and Recording on Database
