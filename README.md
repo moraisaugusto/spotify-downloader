@@ -32,7 +32,7 @@ Configure your credentials. Edit the file spotify.py
 ```shell
 os.environ["SPOTIPY_CLIENT_ID"] = ''
 os.environ["SPOTIPY_CLIENT_SECRET"] = ''
-os.environ["SPOTIPY_REDIRECT_URI"] = 'yourredirectURI'
+os.environ["SPOTIPY_REDIRECT_URI"] = 'http://yourredirectURI'
 spotify.retrievePlaylists("SPOTIFYUSERNAME")
 youtube.getMusics('YOURPLAYLIST')
 ```
@@ -40,6 +40,8 @@ youtube.getMusics('YOURPLAYLIST')
 #### Using
 
 Edit the file spotify.py
+
+NOTE: The first time when you run the script will be ask to you the REDIRECT URI. Just paste the URI returned from the given URI. 
 
 ```shell
 python spotify.py

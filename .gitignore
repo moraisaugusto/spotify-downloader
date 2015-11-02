@@ -1,6 +1,9 @@
 # Ignoring downloads content and temp folder
 downloads/*
 tmp/
+*.m3u
+.cache*
+data/spotify.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

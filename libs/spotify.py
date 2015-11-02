@@ -11,6 +11,8 @@ class Spotify():
     def retrievePlaylists(self, username):
         """ Retrieves all user playlists """
         token = util.prompt_for_user_token(username)
+        print(token)
+        exit
         
         if token:
             sp = spotipy.Spotify(auth=token)
@@ -66,8 +68,6 @@ class Spotify():
             #else:
                 print('Already Added: ' + trackID)
                 
-    
-            
     def clear_str(self, string):
         """ Clear strange Unicode Chars """
         string.replace(u'\u2014', u'-') # replacing hiphen char
