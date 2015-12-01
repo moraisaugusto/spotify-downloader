@@ -4,6 +4,7 @@ tmp/
 *.m3u
 .cache*
 data/spotify.db
+tags
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
