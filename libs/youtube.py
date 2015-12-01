@@ -1,27 +1,22 @@
 import sys
 import os
-#import glob
-from bs4 import BeautifulSoup
-#from bs4 import UnicodeDammit
-#from inspect import getmembers
-#from pprint import pprint
 import sqlite3
-from mutagen.easyid3 import EasyID3
-from mutagen.mp3 import MP3
-from mutagen.id3 import ID3, APIC, TRCK, TIT2, TPE1, TALB, TDRC, TCON, COMM, error
 import urllib.request
 from optparse import TitledHelpFormatter
 from libs.util import retry
-
+from bs4 import BeautifulSoup
+from mutagen.easyid3 import EasyID3
+from mutagen.mp3 import MP3
+from mutagen.id3 import ID3, APIC, TRCK, TIT2, TPE1, TALB, TDRC, TCON, COMM, error
 
 #Loading libs
 if (sys.version_info > (3,0)):
     from urllib.request import urlopen
     from urllib.parse import quote_plus as qp
     raw_input = input
-#else:
-#    from urllib2 import urlopen
-#    from urllib import quote_plus as qp
+else:
+    from urllib2 import urlopen
+    from urllib import quote_plus as qp
 
 class Youtube():
     """ Youtube
@@ -43,7 +38,7 @@ class Youtube():
         conn = sqlite3.connect('data/spotify.db')
         cursor = conn.cursor()
 
-        sql = 'SELECT * FROM musics WHERE flag = 0 AND playlist = "' + playlist + '"'
+        sql = 'SELECT * FROM musics WHERE flag = 0 AND playlist like "' + playlist + '%"'
         cursor.execute(sql)
         musics = cursor.fetchall()
 
